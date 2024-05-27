@@ -1,113 +1,86 @@
-import Image from "next/image";
+import { FaRegBell } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { CiCalendar } from "react-icons/ci";
+import { IoFilter } from "react-icons/io5";
+import { BsCameraVideoFill } from "react-icons/bs";
+import { MdOutlineAssignmentTurnedIn } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa";
+import MainAside from "@/components/mainAside/MainAside";
+
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className="bg-blue-900 max-w-full h-12 text-white">
+
+      </header>
+
+      <div className="flex flex-1 max-w-full">
+
+        <MainAside/>
+
+        <div className="h-svh w-[290px] bg-customDark shadow-sm">
+          <header className="h-14 flex justify-between items-center pl-2 pr-2 flex-1  border-y-2 border-y-black">
+            <span className="text-white font-bold">Chat</span>
+            <div className="flex items-center justify-center gap-2">
+              <div className="cursor-pointer hover:text-blue-500"><IoFilter/></div>
+              <div className="p-2 rounded-full border-gray-400 border-[1px] cursor-pointer hover:bg-gray-600"><BsCameraVideoFill/></div>
+              <div className="p-2 rounded-full border-blue-700 bg-blue-700 border-[1px] cursor-pointer hover:bg-blue-600"><MdOutlineAssignmentTurnedIn/></div>
+            </div>
+          </header>
+
+          <div className="w-[90%] m-auto flex items-center justify-center group border-gray-400 border-[1px] cursor-pointer hover:bg-gray-500 transition-colors rounded-md space-x-1 mt-4 pt-[2px] pb-[2px] pl-4 pr-4">
+          <FaRegUser size={15} className="text-blue-500 group-hover:text-gray-200 transition-colors"/>
+          <span className="text-sm">Localizar e convidar pessoas</span>
+          </div>
+
         </div>
+
+        <section className="flex-1 bg-zinc-900 shadow-md pt-24">
+          <h1 className="text-center text-xl font-bold">Bem vindo aos Teams!</h1>
+          <p className="text-center text-[13px]">Veja como começar...</p>
+
+          <div className="flex items-center justify-around mt-4">
+            <div className="w-[235px] h-60 rounded-lg shadow-md bg-zinc-900">
+              <div className="bg-gray-400 w-[100%] h-24 rounded-t-lg"></div>
+              <h1 className="text-[13px] text-center font-bold">Convidar pessoas que voce conhece</h1>
+              <p className="text-center text-[11px]">É facil reunir todos no teams.</p>
+
+              <button className="ml-[19%] mt-12 text-sm bg-blue-700 px-3 py-1 rounded-sm font-bold hover:bg-blue-500 transition-colors">Convidar pessoas</button>
+            </div>
+
+            <div className="w-[235px] h-60 rounded-lg shadow-md bg-zinc-900">
+              <div className="bg-gray-400 w-[100%] h-24 rounded-t-lg"></div>
+              <h1 className="text-[13px] text-center font-bold">Comece a conversar</h1>
+              <p className="text-center text-[11px]">Envie mensagens instantâneas, compartilhe arquivos e muito mais pelo chat.</p>
+
+              <button className="ml-[19%] mt-8 text-sm bg-blue-700 px-3 py-1 rounded-sm font-bold hover:bg-blue-500 transition-colors">Convidar pessoas</button>
+            </div>
+
+            <div className="w-[235px] h-60 rounded-lg shadow-md bg-zinc-900">
+              <div className="bg-gray-400 w-[100%] h-24 rounded-t-lg"></div>
+              <h1 className="text-[13px] text-center font-bold">Reunir agora</h1>
+              <p className="text-center text-[11px]">Ignore o calendário e crie uma reunião instantânea com apenas um clique.</p>
+
+              <button className="ml-[19%] mt-8 text-sm bg-blue-700 px-3 py-1 rounded-sm font-bold hover:bg-blue-500 transition-colors">Convidar pessoas</button>
+            </div>
+
+            
+
+            
+
+            
+            {/*  */}
+            
+
+          </div>
+        </section>
+
+      
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
